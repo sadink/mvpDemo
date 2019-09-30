@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mvpDemo</string>
+
+    <string name="loginUserName_null">用户名不能为空</string>
+    <string name="loginPwd_null">密码不能为空</string>
+    <string name="loginUserName_error">用户名不合法</string>
+    <string name="loginPwd_error">密码不合法</string>
+</resources>
