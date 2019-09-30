@@ -16,7 +16,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 
 /**
- * Created by Dongdd on 2019/9/30 0030 9:49.
+ * Created by lhfBoy on 2019/9/30 0030 9:49.
  */
 public class LoginPresenterImpl implements ILoginPresenter {
 

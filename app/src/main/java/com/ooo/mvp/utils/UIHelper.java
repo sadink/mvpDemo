@@ -7,7 +7,7 @@ import com.ooo.mvp.view.activity.MainActivity;
 
 /**
  * 视图页面调整
- * Created by Dongdd on 2019/9/30 0030 10:36.
+ * Created by lhfBoy on 2019/9/30 0030 10:36.
  */
 public class UIHelper {
 
