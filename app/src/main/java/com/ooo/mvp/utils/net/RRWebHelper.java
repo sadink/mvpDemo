@@ -31,7 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Rxjava2.0、Retrofit2.0访问网络工具类
- * Created by Dongdd on 2019/4/21 23:02.
+ * Created by lhfBoy on 2019/4/21 23:02.
  */
 public class RRWebHelper {
 

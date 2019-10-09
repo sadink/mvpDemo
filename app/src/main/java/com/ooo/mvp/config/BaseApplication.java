@@ -7,7 +7,7 @@ import com.ooo.mvp.BuildConfig;
 import com.socks.library.KLog;
 
 /**
- * Created by Dongdd on 2019/10/8 0008 9:45.
+ * Created by lhfBoy on 2019/10/8 0008 9:45.
  */
 public class BaseApplication extends Application {
 

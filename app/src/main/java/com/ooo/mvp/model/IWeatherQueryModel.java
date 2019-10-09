@@ -6,7 +6,7 @@ import io.reactivex.Observer;
 
 /**
  * 天气查询业务功能接口
- * Created by Dongdd on 2019/10/8 0008 10:13.
+ * Created by lhfBoy on 2019/10/8 0008 10:13.
  */
 public interface IWeatherQueryModel {
 

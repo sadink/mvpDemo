@@ -2,7 +2,7 @@ package com.ooo.mvp.view;
 
 /**
  * 天气查询功能视图接口
- * Created by Dongdd on 2019/10/8 0008 8:55.
+ * Created by lhfBoy on 2019/10/8 0008 8:55.
  */
 public interface IWeatherView {
 

@@ -16,7 +16,7 @@ import com.socks.library.KLog;
 
 /**
  * 天气查询业务功能接口
- * Created by Dongdd on 2019/10/8 0008 9:22.
+ * Created by lhfBoy on 2019/10/8 0008 9:22.
  */
 public class WeatherPresenterImpl implements IWeatherPresenter {
 

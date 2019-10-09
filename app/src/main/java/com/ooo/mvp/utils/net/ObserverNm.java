@@ -13,7 +13,7 @@ import io.reactivex.disposables.Disposable;
 
 /**
  * 自定义观察者处理
- * Created by Dongdd on 2019/4/21 23:17.
+ * Created by lhfBoy on 2019/4/21 23:17.
  */
 public class ObserverNm<T> implements Observer<T> {
 

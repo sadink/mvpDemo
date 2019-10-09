@@ -21,7 +21,7 @@ import com.ooo.mvp.view.IWeatherView;
 
 /**
  * 天气查询视图
- * Created by Dongdd on 2019/10/8 0008 8:47.
+ * Created by lhfBoy on 2019/10/8 0008 8:47.
  */
 public class WeatherActivity extends AppCompatActivity implements IWeatherView, IProgressBarView, View.OnClickListener {
 

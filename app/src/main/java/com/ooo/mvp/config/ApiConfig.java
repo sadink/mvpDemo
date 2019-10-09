@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 import retrofit2.http.Url;
 
 /**
- * Created by Dongdd on 2019/10/8 0008 15:54.
+ * Created by lhfBoy on 2019/10/8 0008 15:54.
  */
 public interface ApiConfig {
 

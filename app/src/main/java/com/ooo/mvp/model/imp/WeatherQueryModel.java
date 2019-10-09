@@ -15,7 +15,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * 天气查询业务功能接口view_dialog
- * Created by Dongdd on 2019/10/8 0008 11:02.
+ * Created by lhfBoy on 2019/10/8 0008 11:02.
  */
 public class WeatherQueryModel implements IWeatherQueryModel {
 
