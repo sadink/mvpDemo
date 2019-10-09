@@ -12,17 +12,18 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ooo.mvp.R;
-import com.ooo.mvp.config.AppConfig;
+import com.ooo.mvp.config.BaseConfig;
 import com.ooo.mvp.presenter.ILoginPresenter;
 import com.ooo.mvp.presenter.imp.LoginPresenterImpl;
 import com.ooo.mvp.utils.UIHelper;
 import com.ooo.mvp.view.ILoginView;
+import com.ooo.mvp.view.IProgressBarView;
 
 /**
  * 登录模块
  * Created by lhfBoy on 2019/9/30 0030 8:57.
  */
-public class LoginActivity extends AppCompatActivity implements ILoginView, View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements ILoginView, IProgressBarView, View.OnClickListener {
 
     private EditText edtUserName;
     private EditText edtPwd;
@@ -48,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
         btnReset.setOnClickListener(this);
 
         // init
-        iLoginPresenter = new LoginPresenterImpl(this, this);
+        iLoginPresenter = new LoginPresenterImpl(this, this,this);
         onSetProgressBarVisibility(View.INVISIBLE);
     }
 
@@ -78,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
     public void onLoginResult(Boolean result, int code, String msg) {
         btnLogin.setEnabled(true);
         btnReset.setEnabled(true);
-        Log.e(AppConfig.Log, "登录结果：" + result + ",code:" + code + ",msg：" + msg);
+        Log.e(BaseConfig.LOG, "登录结果：" + result + ",code:" + code + ",msg：" + msg);
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
         if (result) {
             UIHelper.showMainActivity(this);

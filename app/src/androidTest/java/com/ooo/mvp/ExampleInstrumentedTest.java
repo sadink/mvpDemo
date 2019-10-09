@@ -5,10 +5,15 @@ import android.content.Context;
 import androidx.test.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.ooo.mvp.config.AppConfig;
+import com.ooo.mvp.config.BaseConfig;
 import com.ooo.mvp.presenter.ILoginPresenter;
+import com.ooo.mvp.presenter.IWeatherPresenter;
 import com.ooo.mvp.presenter.imp.LoginPresenterImpl;
+import com.ooo.mvp.presenter.imp.WeatherPresenterImpl;
 import com.ooo.mvp.view.ILoginView;
+import com.ooo.mvp.view.IProgressBarView;
+import com.ooo.mvp.view.IWeatherView;
+import com.socks.library.KLog;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,25 +34,24 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.ooo.mvp", appContext.getPackageName());
 
-        ILoginPresenter iLoginPresenter = new LoginPresenterImpl(appContext, new ILoginView() {
+//        IWeatherPresenter iLoginPresenter = new WeatherPresenterImpl(appContext, new IWeatherView() {
+//            @Override
+//            public void onClearCity() {
+//
+//            }
+//
+//            @Override
+//            public void onWeatherResult(int code, String weather, String msg) {
+//                KLog.e(BaseConfig.LOG,"code:" +code+ ",\nweather:" + weather+"");
+//            }
+//        }, new IProgressBarView() {
+//            @Override
+//            public void onSetProgressBarVisibility(int visibility) {
+//
+//            }
+//        });
 
-            @Override
-            public void onClearText() {
-
-            }
-
-            @Override
-            public void onLoginResult(Boolean result, int code, String msg) {
-                assertEquals(AppConfig.Log, "result：" + result + ",code：" + code + ",msg：" + msg);
-            }
-
-            @Override
-            public void onSetProgressBarVisibility(int visibility) {
-
-            }
-        });
-
-        iLoginPresenter.doLogin("张三", "123456");
+//        iLoginPresenter.queryWeather("西安");
 
     }
 }

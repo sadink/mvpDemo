@@ -8,6 +8,7 @@ import android.view.View;
 import com.ooo.mvp.R;
 import com.ooo.mvp.presenter.ILoginPresenter;
 import com.ooo.mvp.view.ILoginView;
+import com.ooo.mvp.view.IProgressBarView;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,10 +23,13 @@ public class LoginPresenterImpl implements ILoginPresenter {
 
     private Context context;
     private ILoginView iLoginView;
+    private IProgressBarView iProgressBarView;
 
-    public LoginPresenterImpl(Context context, ILoginView iLoginView) {
+
+    public LoginPresenterImpl(Context context, ILoginView iLoginView, IProgressBarView iProgressBarView) {
         this.context = context;
         this.iLoginView = iLoginView;
+        this.iProgressBarView = iProgressBarView;
     }
 
     @Override
@@ -50,13 +54,13 @@ public class LoginPresenterImpl implements ILoginPresenter {
             return;
         }
 
-        iLoginView.onSetProgressBarVisibility(View.VISIBLE);
+        iProgressBarView.onSetProgressBarVisibility(View.VISIBLE);
         Observable.timer(5, TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<Long>() {
                     @Override
                     public void accept(Long aLong) {
-                        iLoginView.onSetProgressBarVisibility(View.INVISIBLE);
+                        iProgressBarView.onSetProgressBarVisibility(View.INVISIBLE);
                         iLoginView.onLoginResult(true, 200, "登录成功");
                     }
                 });

@@ -19,11 +19,4 @@ public interface ILoginView {
      * @param msg
      */
     void onLoginResult(Boolean result, int code, String msg);
-
-    /**
-     * 设置进度条交互效果
-     *
-     * @param visibility
-     */
-    void onSetProgressBarVisibility(int visibility);
 }

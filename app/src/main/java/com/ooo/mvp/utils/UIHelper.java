@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 import com.ooo.mvp.view.activity.MainActivity;
+import com.ooo.mvp.view.activity.WeatherActivity;
 
 /**
  * 视图页面调整
@@ -18,6 +19,15 @@ public class UIHelper {
      */
     public static void showMainActivity(Activity activity) {
         Intent intent = new Intent(activity, MainActivity.class);
+        activity.startActivity(intent);
+    }
+
+    /**
+     * 天气查询视图
+     * @param activity
+     */
+    public static void showWeatherActivity(Activity activity) {
+        Intent intent = new Intent(activity, WeatherActivity.class);
         activity.startActivity(intent);
     }
 }
